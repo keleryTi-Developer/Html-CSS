@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jogabilidade</title>
+
+	<style type="text/css">
+	
+	body{
+		margin: 0 auto;
+        background-color: blanchedalmond;
+	}
+
+	table{
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 0px;
+	}
+
+	#menu{
+		padding: 1px;
+		background:#D3D3D3;
+		margin-left: -3px;
+		margin-right: -3px;
+	}
+
+	#menu1{
+		float: right;
+		margin-top:30px;
+		margin-right: 20px;
+		
+
+	}
+
+	#menu2{
+		color: black;
+		margin-left: 10px;
+	}
+	a{
+		text-decoration: none;
+		color: #000000;
+		font-weight: bold;
+	}
+
+	a:hover {
+		background-color: #ffffff;
+
+	}
+
+	p{
+		text-decoration: none;
+		padding: 8px;
+		font-family: sans-serif;
+		font-size: 15px;
+		text-align: justify;
+		margin-right: 100px;
+		margin-left: 100px;
+	}
+
+	h2{
+		margin-left:100px ;
+		margin-top: 30px;
+	}
+	footer{
+		padding: 10px;
+		text-align: center;
+	}
+	
+
+	</style>
+</head>
+<body>
+	<table border="2">
+			<tr>
+				<td >
+					<div id="menu">
+				 		<div  id ="menu1">
+				 				<a href="index.html">Inicio  |</a>
+			 					<a href="jogabilidade.html">Jogabilidade-e-personagens  |</a>
+			 					<a href="Criação-de-personagens.html">Criação-de-personagens  |</a>
+			 					<a href="Sobre.html">Sobre</a>
+		 				</div>
+		 				<div id="menu2">
+		 					<h1>BTM@EB:: Jogabilidade e personagens</h1>		 					
+				 		</div>	
+				 	</div>	 		
+			 	</td>
+			 		 	
+			</tr>
+			
+			<tr>
+				<td><h2>Jogabibilidade</h2></td>
+			</tr>
+			<tr>
+				<td>
+					<p>A batalha é realizada em um cenário fixo no qual podem ser alocados até oito 
+			jogadores, sendo que só pode haver um personagem de cada nação. O cenário é fixo porque 
+			a batalha inteira ocorre neste único cenário escolhido. Dentre os cenários possíveis, o jogo 
+			pode definir qualquer uma das oito casas das nações.
+			Não existem alianças e “amizades” entre os personagens, portanto eles se 
+			enfrentam em duelos de um contra o outro em cada rodada e o vencedor avança para a 
+			próxima rodada. No início da rodada, os personagens são distribuídos aleatoriamente em 
+			pares para realizarem a batalha e, caso a quantidade de personagens na batalha seja 
+			ímpar, um deles ficará fora da batalha e se classificará automaticamente para a rodada 
+			seguinte. Os vencedores de uma rodada são novamente distribuídos aleatoriamente para 
+			se enfrentarem em uma nova batalha. As rodadas são repetidas de acordo com a 
+			quantidade restante de personagens na arena, até que ocorra a batalha final e seja 
+			definido um personagem como o vencedor. O jogador que “sobrou” na rodada anterior não 
+			pode sobrar novamente na rodada seguinte. A Figura 1 exemplifica um cenário com cinco 
+			jogadores</p>
+			<p>A batalha é realizada em turnos de duelos diretos entre dois personagens, conforme 
+			foi descrito anteriormente. Porém, é preciso descrever com mais detalhes como se deve 
+			determinar o vencedor de cada duelo.
+			Antes, deve-se observar que um duelo possui como informações de entrada: o 
+			cenário da batalha e os dois personagens do confronto com as suas características. Após o 
+			confronto, a informação de saída é o vencedor do confronto com os danos que sofreu e 
+			infringiu. Em outras palavras, conforme explicita a Figura 2, é preciso saber explicar o que 
+			ocorreu no duelo.
+			</p>
+			<p>O confronto ocorre em turnos no qual cada personagem faz uma jogada que pode 
+				ser ataque, defesa ou movimentação em direção ao adversário.
+				Jogador A Jogador B Jogador C Jogador D Jogador E
+				Jogador B Jogador C
+				Jogador B Jogador E Jogador C
+				Participantes da rodada: Jogador A, Jogador B, Jogador C, Jogador D e Jogador E.
+				1ª rodada
+				Participantes da rodada: Jogador B, Jogador C e Jogador E.
+				2ª rodada
+				Jogador B Jogador C
+				Participantes da rodada: Jogador B e Jogador C.
+				3ª rodada
+				Jogador B
+				Jogador C
+				Duelo Entrada Saída
+				- cenário da batalha
+				- personagens do duelo
+				- vencedor do duelo
+				- danos sofridos por cada 
+				personagem
+				O ataque é o golpe desferido pelo personagem no adversário. O golpe possui uma 
+				probabilidade de atingir o adversário e essa probabilidade é calculada de acordo com a sua 
+				habilidade naquele tipo de ataque. O ataque pode ser do tipo:
+				• ataque curto é o ataque no qual o jogador está entre zero e um passo de 
+				distância do adversário; e
+				• ataque longo é o ataque no qual o jogador está entre dois e dez passos de 
+				distância.
+				Considera-se que o ataque atingiu o adversário se ele estiver dentro do raio de ação 
+				dos tipos de ataques previstos. Portanto, não é possível realizar ataque em distância 
+				superior a dez passos. Caso o ataque atinja o adversário, o dano causado será calculado 
+				com base nos fatores: habilidade do personagem no tipo de ataque desferido, habilidade 
+				do adversário em realizar a defesa, se o adversário está realizando a defesa e bônus ou 
+				penalidades causadas pelo cenário da batalha.
+				A defesa é a ação que o personagem realiza para se proteger e reduzir os danos 
+				causados por golpes que podem ser desferidos pelo adversário. A defesa possui uma 
+				probabilidade de reduzir o dano do ataque e essa probabilidade é calculada de acordo com 
+				a sua habilidade naquele tipo de ataque. A defesa pode ser do tipo:
+				• defesa curta é aquela que visa proteger o personagem do ataque curto 
+				desferido pelo adversário; e
+				• defesa longa é aquela que visa proteger o personagem do ataque longo 
+				desferido pelo adversário.
+				Considera-se que foi realizada a defesa se a ação do personagem é de defesa e se 
+				o adversário deferiu algum golpe contra ele. Caso ocorra a defesa, a redução do dano 
+				causado deve considerar o tipo de ataque recebido, habilidade do adversário no tipo de 
+				ataque desferido, a capacidade do personagem em realizar a defesa e bônus ou 
+				penalidades causadas pelo cenário da batalha.
+				Movimentação: é o avanço do personagem na arena do confronto. Esse avanço se 
+				dá um passo por vez até que não existam mais passos entre o personagem e o adversário.
+				CONTINUA..</p>
+
+
+				</td>
+			</tr>		 
+	 		<tr>	 			
+	 			<td >
+	 				<h2>Personagens</h2>
+	 			</td>
+	 		</tr>
+			<tr>
+
+				<td>
+					<p>O jogo de batalha entre personagens baseados na Terra-Média que é o mundo do 
+					Senhor dos Anéis. A batalha ocorre por turnos de forma automática no formato de todos 
+					contra todos, considerando as características dos personagens. Cada personagem é de uma 
+					nação e possui 5 habilidades, conforme descrito a seguir.
+					As habilidades que os personagens possuem são força, velocidade, precisão, 
+					armadura e recuperação. Além da nacionalidade e das 5 habilidades, o personagem possui 
+					seus pontos de energia e um nome para identificá-lo ao longo de suas interações no jogo. 
+					No início do jogo, o personagem possui 100 pontos de energia e outros 100 pontos de 
+					habilidades que devem ser distribuídos entre as habilidades da forma que o jogador 
+					preferir.
+					• Força: a capacidade que o personagem possui de infringir danos no adversário no 
+					combate a curta distância;
+					• Precisão: a precisão denota a capacidade na qual o personagem tem para infringir 
+					danos no adversário à longa distância;
+					• Velocidade: o tempo no qual o personagem leva para se aproximar do adversário;
+					• Armadura: o quanto reduz o impacto dos ataques do adversário, independente da 
+					distância na qual os ataques são realizados;
+					• Recuperação: a capacidade de recuperar pontos para a próxima batalha.
+					Neste jogo, foram selecionadas as seguintes nações da Terra-Média: Orc Snaga,
+					Uruk-hai, Cavaleiro de Rohan, Guerreiro de Gondor, Hobbit, Elfo da Floresta, Elfo de 
+					Lothlórien e anão. A casa de cada nação é, respectivamente, Cirith Ungol, Portão Negro, 
+					Abismo de Helm, Minas Tirith, O Condado, Floresta das Trevas ou Mirkwood, Caras 
+					Galadhon ou Cidade das Árvores e Colinas de Ferro. A Tabela 1 descreve a ligação entre 
+					cada nação e a sua casa.
+					</p>
+
+					<p>Nação Casa
+						Orc Snaga Cirith Ungol
+						Uruk-hai Portão Negro
+						Cavaleiro de Rohan Abismo de Helm
+						Guerreiro de Gondor Minas Tirith
+						Hobbit O Condado
+						Elfo da Floresta Floresta das Trevas
+						Elfo de Lothlórien Caras Galadhon
+						Anão Colinas de Ferro</p>						
+	 				
+				</td>				
+				
+			</tr>
+			
+			<tr>
+				
+					<td colspan="2">
+     	   		<footer>
+     	   			<hr>
+     	   				Cursos de TI da Estácio de Brasília em 2022.1 (TIEB 2022.1)</br>
+							Todos os direitos reservados</br>
+				(Terra- Média, locais e personagens são direitos de <a hef="www.middleearth.com/home.html">Tolkien Enterprises)
+     	   		</footer>
+			
+				</td>
+			</tr>
+
+	</table>
+	 
+
+	
+</body>
+</html>
